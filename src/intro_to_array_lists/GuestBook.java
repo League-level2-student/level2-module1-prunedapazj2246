@@ -24,8 +24,6 @@ public class GuestBook implements MouseListener {
 	JButton viewNames = new JButton();
 	ArrayList<String>names=new ArrayList<String>();
 	public static void main() {
-		GuestBook gB = new GuestBook();
-		gB.run();
 	}
 	public void run() {
 		addName.setText("Add Name");
@@ -67,9 +65,9 @@ public class GuestBook implements MouseListener {
 		}
 		else {
 			for (int i = 0; i < names.size(); i++) {
-				int guest = 1;
-				JOptionPane.showMessageDialog(null,"Guest "+guest+": "+names.get(i) );
-				guest++;
+				int guest = i+1;
+				JOptionPane.showMessageDialog(null,"Guest #"+guest+": "+names.get(i) );
+				
 			}
 		}
 	}
